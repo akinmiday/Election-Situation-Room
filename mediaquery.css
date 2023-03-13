@@ -1,0 +1,73 @@
+@media screen and (max-width: 480px){
+
+    main{
+        
+        display:grid;
+        width: 100%;
+        
+    }
+
+    .container{
+        height: max-content;
+        font-size: 1.2rem;
+        font-weight: 500;     
+    }
+
+    .bar-chart{
+        width: 100%;
+        
+    }
+
+    .votes-counted{
+        padding-bottom: 50px;
+    }
+
+    footer{
+        height: 2rem;
+        position: fixed;
+    }
+
+    header{
+        height: 2rem;
+    }
+
+    .ward-uploaded{
+        font-size: medium;
+    }
+
+    .upload-successful{
+        font-size: .75rem;
+    }
+
+    .upload-successful img{
+        height: 5em;
+    }
+
+    .dispute-result{
+        font-size: 1rem;
+    }
+
+    .dispute-upload-successful{
+        font-size: .7rem;
+        margin-bottom: 15px;
+    }
+
+    .upload-result-mobile{
+        display: none;
+    }
+
+    }
+
+
+/* Media screen 768 and below */
+
+@media screen and (max-width: 768px) {
+    main{
+        margin-bottom: 100px;
+    }
+
+    footer{
+        position: fixed;
+    }
+}
+
