@@ -25,7 +25,7 @@
                 <!-- <h4>Upload Votes from Polling Unit</h4> -->
   
                 <label for="search" >Local Government Area</label>
-                <input placeholder="Enter Local government" type="text" id="search" list="lga">
+                <input placeholder="Enter Local government" type="text" id="search" list="lga" required>
                 <!-- <fieldset class="button dropdown"> -->
                       <datalist id="lga">
                          <option value="ikeja"></option>
@@ -35,7 +35,7 @@
                 <!-- </fieldset> -->
   
                 <label for="search" >Polling Unit</label>
-                <input placeholder="Enter Polling Unit" type="text" id="search" list="polling-unit">
+                <input placeholder="Enter Polling Unit" type="text" id="search" list="polling-unit" required>
                 <!-- <fieldset class="button dropdown"> -->
                       <datalist id="polling-unit">
                          <option value="red"></option>
@@ -190,5 +190,7 @@
     </main>
 
     <footer> <p>&#169; 2023 Babasalami Developers</p></footer>
+
+    <script src="/Javascript/index.js"></script>
 </body>
 </html>

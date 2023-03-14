@@ -53,15 +53,21 @@
     }
 
     .upload-result-mobile{
-        display: none;
+        display: block;
     }
 
     }
 
+
+    @media screen and (min-width: 481px){
+        .sub-container{
+            display: block;
+        }
+    }
 
 /* Media screen 768 and below */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 750px) {
     main{
         margin-bottom: 100px;
     }
@@ -69,5 +75,6 @@
     footer{
         position: fixed;
     }
+
 }
 

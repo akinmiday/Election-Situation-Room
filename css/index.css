@@ -53,7 +53,7 @@ footer{
 
 /* Displays */
 .sub-container{
-    display: block;
+    display: none;
 }
 
 .upload-successful{
