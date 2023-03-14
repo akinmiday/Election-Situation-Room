@@ -121,7 +121,7 @@
   
                   <fieldset>
                   <label>NUMBER OF ACCREDITED VOTERS</label>
-                  <input placeholder="Number of accredited voters" type="number" tabindex="1" required autofocus>
+                  <input placeholder="Number of accredited voters" id="accreditedVoters" type="number" tabindex="1" required autofocus>
                 </fieldset>
   
                 <div class="snap-shot">
@@ -133,15 +133,15 @@
                 <label>Votes scored by each Party</label>
                 <div class="votes-field" >
                   <fieldset>
-                      <input placeholder="APC" type="number" tabindex="2" required>
+                      <input placeholder="APC" type="number" id="apcVotes" tabindex="2" required>
                     </fieldset>
       
                     <fieldset>
-                      <input placeholder="PDP" type="number" tabindex="3" required>
+                      <input placeholder="PDP" type="number" id="pdpVotes" tabindex="3" required>
                     </fieldset>
       
                     <fieldset>
-                      <input placeholder="LP" type="number" tabindex="3" required>
+                      <input placeholder="LP" id="lpVotes" type="number" tabindex="3" required>
                     </fieldset>
                 </div>
   
@@ -163,19 +163,19 @@
             <ul class="skill-list">
               <li class="skill">
                 <h3>APC</h3>
-                <progress class="skill-1" max="100" value="35">
+                <progress class="skill-1" max="100" value="">
                   <strong>Skill Level: 35%</strong>
                 </progress>
               </li>
               <li class="skill">
                 <h3>PDP</h3>
-                <progress class="skill-2" max="100" value="30">
+                <progress class="skill-2" max="100" value="">
                   <strong>Skill Level: 25%</strong>
                 </progress>
               </li>
               <li class="skill">
                 <h3>Labour</h3>
-                <progress class="skill-3" max="100" value="35">
+                <progress class="skill-3" max="100" value="">
                   <strong>Skill Level: 35%</strong>
                 </progress>
               </li>
@@ -192,5 +192,7 @@
     <footer> <p>&#169; 2023 Babasalami Developers</p></footer>
 
     <script src="/Javascript/index.js"></script>
+    <script src="/Javascript/chart.js"></script>
+    
 </body>
 </html>
