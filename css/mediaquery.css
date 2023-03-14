@@ -56,14 +56,19 @@
         display: block;
     }
 
+    .sub-container{
+        display: none;
+    }
+
     }
 
 
-    @media screen and (min-width: 481px){
+/* @media screen and (min-width: 481px){
         .sub-container{
             display: block;
         }
-    }
+       
+    } */
 
 /* Media screen 768 and below */
 

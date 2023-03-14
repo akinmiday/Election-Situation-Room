@@ -20,10 +20,10 @@
     <main>
         <div class="container">  
             <span class="sub-container" >
-              <form id="contact" action="" method="post">
+              <!-- <form id="contact" action="" method="post"> -->
+                <form id="contact" action="" method="post" onsubmit="return validateVotes()">
                 <p class="form-header" >UPLOAD RESULT</p>
                 <!-- <h4>Upload Votes from Polling Unit</h4> -->
-  
                 <label for="search" >Local Government Area</label>
                 <input placeholder="Enter Local government" type="text" id="search" list="lga" required>
                 <!-- <fieldset class="button dropdown"> -->
@@ -46,7 +46,7 @@
   
                   <fieldset>
                   <label>NUMBER OF ACCREDITED VOTERS</label>
-                  <input placeholder="Number of accredited voters" type="number" tabindex="1" required autofocus>
+                  <input placeholder="Number of accredited voters" id="numberofaccredited" type="number" tabindex="1" required autofocus>
                 </fieldset>
   
                 <div class="snap-shot">
@@ -58,19 +58,18 @@
                 <label>Votes scored by each Party</label>
                 <div class="votes-field" >
                   <fieldset>
-                      <input placeholder="APC" type="number" tabindex="2" required>
+                      <input placeholder="APC" type="number" id="numberofAPCvotes" tabindex="2" required>
                     </fieldset>
       
                     <fieldset>
-                      <input placeholder="PDP" type="number" tabindex="3" required>
+                      <input placeholder="PDP" type="number" id="numberofPDPvotes" tabindex="3" required>
                     </fieldset>
       
                     <fieldset>
-                      <input placeholder="LP" type="number" tabindex="3" required>
+                      <input placeholder="LP" type="number" id="numberofLPvotes" tabindex="3" required>
                     </fieldset>
                 </div>
-  
-  
+                
                 <fieldset>
                   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                 </fieldset>
@@ -193,6 +192,7 @@
 
     <script src="/Javascript/index.js"></script>
     <script src="/Javascript/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     
 </body>
 </html>
