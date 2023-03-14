@@ -90,16 +90,16 @@
                 <h2>LP :<span class="lp-ward-result" >10</span></h2>
               </div>
 
-              <button>Dispute Result</button>
+              <button class="dispute-btn">Dispute Result</button>
             </span>
 
             <span class="dispute-result" >
-              <form id="contact" action="" method="post">
+              <form id="contact" action="" method="post" onsubmit="return validateDisputedVotes()">
                 <h1 >Dispute Result</h1>
                 <!-- <h4>Upload Votes from Polling Unit</h4> -->
   
                 <label for="search" >Local Government Area</label>
-                <input placeholder="Enter Local Government" type="text" id="search" list="lga">
+                <input placeholder="Enter Local Government" type="text" id="search" list="lga" required autofocus>
                 <!-- <fieldset class="button dropdown"> -->
                       <datalist id="lga">
                          <option value="ikeja"></option>
@@ -109,7 +109,7 @@
                 <!-- </fieldset> -->
   
                 <label for="search" >Polling Unit</label>
-                <input placeholder="Enter Polling Unit" type="text" id="search" list="polling-unit">
+                <input placeholder="Enter Polling Unit" type="text" id="search" list="polling-unit" required autofocus>
                 <!-- <fieldset class="button dropdown"> -->
                       <datalist id="polling-unit">
                          <option value="red"></option>
@@ -120,7 +120,7 @@
   
                   <fieldset>
                   <label>NUMBER OF ACCREDITED VOTERS</label>
-                  <input placeholder="Number of accredited voters" id="accreditedVoters" type="number" tabindex="1" required autofocus>
+                  <input placeholder="Number of accredited voters" id="accreditedVoters"  type="number" tabindex="1" required autofocus>
                 </fieldset>
   
                 <div class="snap-shot">
