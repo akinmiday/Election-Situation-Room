@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/chart.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situation Room</title>
+</head>
+<body>
+    <header>
+        <p>LAGOS SITUATION ROOM</p>
+    </header>
+
+    <main>
+        <div class="container">  
+            <span class="sub-container" >
+              <!-- <form id="contact" action="" method="post"> -->
+                <form id="contact" method="post" onsubmit="return validateVotes()">
+                <p class="form-header" >UPLOAD RESULT</p>
+                <!-- <h4>Upload Votes from Polling Unit</h4> -->
+                <label for="search" >Local Government Area</label>
+                <input placeholder="Enter Local government" type="text" id="lga-input" list="lga" required>
+                <!-- <fieldset class="button dropdown"> -->
+                      <datalist id="lga">
+                         <option value="ikeja"></option>
+                         <option value="etiosa"></option>
+                         <option value="badagry"></option>
+                      </datalist>
+                <!-- </fieldset> -->
+  
+                <label for="search" >Polling Unit</label>
+                <input placeholder="Enter Polling Unit" type="text" id="polling-unit-input" list="polling-unit" required>
+                <!-- <fieldset class="button dropdown"> -->
+                      <datalist id="polling-unit">
+                         <option value="red"></option>
+                         <option value="yellow"></option>
+                         <option value="blue"></option>
+                      </datalist>
+                <!-- </fieldset> -->
+  
+                  <fieldset>
+                  <label>NUMBER OF ACCREDITED VOTERS</label>
+                  <input placeholder="Number of accredited voters" id="numberofaccredited" type="number" tabindex="1" required autofocus>
+                </fieldset>
+  
+                <div class="snap-shot">
+                  <label for="avatar">Upload Snapshot of Result</label>
+  
+                <input type="file"  id="snapshot" name="snapshot" accept="image/png, image/jpeg" required>
+                </div>
+                
+                <label>Votes scored by each Party</label>
+                <div class="votes-field" >
+                  <fieldset>
+                      <input placeholder="APC" type="number" id="numberofAPCvotes" tabindex="2" required>
+                    </fieldset>
+      
+                    <fieldset>
+                      <input placeholder="PDP" type="number" id="numberofPDPvotes" tabindex="3" required>
+                    </fieldset>
+      
+                    <fieldset>
+                      <input placeholder="LP" type="number" id="numberofLPvotes" tabindex="3" required>
+                    </fieldset>
+                </div>
+                
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+              </form> 
+            </span>
+
+            <span class="upload-successful" >
+              <img src="/images/uploadsuccessful.png" alt="upload successful">
+              <h1>Result Upload Successful</h1>
+            </span>
+
+            <span class="ward-uploaded" >
+              <h1>Polling Unit already Uploaded !!!</h1>
+              <h2>Results:</h2>
+              <div class="display-result-for-ward" >
+                <h2>APC :<span class="apc-ward-result" >10</span></h2>
+                <h2>PDP :<span class="pdp-ward-result">10</span></h2>
+                <h2>LP :<span class="lp-ward-result" >10</span></h2>
+              </div>
+
+              <button class="dispute-btn">Dispute Result</button>
+            </span>
+
+            <span class="dispute-result" >
+              <form id="contact" action="" method="post" onsubmit="return validateDisputedVotes()">
+                <h1 >Dispute Result</h1>
+                <!-- <h4>Upload Votes from Polling Unit</h4> -->
+  
+                <label for="search" >Local Government Area</label>
+                <input placeholder="Enter Local Government" type="text" id="search" list="lga" required autofocus>
+                <!-- <fieldset class="button dropdown"> -->
+                      <datalist id="lga">
+                         <option value="ikeja"></option>
+                         <option value="etiosa"></option>
+                         <option value="badagry"></option>
+                      </datalist>
+                <!-- </fieldset> -->
+  
+                <label for="search" >Polling Unit</label>
+                <input placeholder="Enter Polling Unit" type="text" id="search" list="polling-unit" required autofocus>
+                <!-- <fieldset class="button dropdown"> -->
+                      <datalist id="polling-unit">
+                         <option value="red"></option>
+                         <option value="yellow"></option>
+                         <option value="blue"></option>
+                      </datalist>
+                <!-- </fieldset> -->
+  
+                  <fieldset>
+                  <label>NUMBER OF ACCREDITED VOTERS</label>
+                  <input placeholder="Number of accredited voters" id="accreditedVoters"  type="number" tabindex="1" required autofocus>
+                </fieldset>
+  
+                <div class="snap-shot">
+                  <label for="avatar">Upload Snapshot of Result</label>
+  
+                <input type="file"  id="snapshot" name="snapshot" accept="image/png, image/jpeg" required>
+                </div>
+                
+                <label>Votes scored by each Party</label>
+                <div class="votes-field" >
+                  <fieldset>
+                      <input placeholder="APC" type="number" id="apcVotes" tabindex="2" required>
+                    </fieldset>
+      
+                    <fieldset>
+                      <input placeholder="PDP" type="number" id="pdpVotes" tabindex="3" required>
+                    </fieldset>
+      
+                    <fieldset>
+                      <input placeholder="LP" id="lpVotes" type="number" tabindex="3" required>
+                    </fieldset>
+                </div>
+  
+  
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+              </form> 
+            </span>
+               
+            <span class="dispute-upload-successful" >
+              <img src="/images/uploadsuccessful.png" alt="upload successful">
+              <h1>Dispute Submitted Successfully</h1>
+            </span>
+        </div>
+
+          <div class="bar-chart">
+            <h1>Vote Count</h1>
+            <ul class="skill-list">
+              <li class="skill">
+                <h3>APC</h3>
+                <progress class="skill-1" max="100" value="">
+                  <strong>Skill Level: 35%</strong>
+                </progress>
+              </li>
+              <li class="skill">
+                <h3>PDP</h3>
+                <progress class="skill-2" max="100" value="">
+                  <strong>Skill Level: 25%</strong>
+                </progress>
+              </li>
+              <li class="skill">
+                <h3>Labour</h3>
+                <progress class="skill-3" max="100" value="">
+                  <strong>Skill Level: 35%</strong>
+                </progress>
+              </li>
+            </ul>
+            <div class="votes-counted">
+                <p>Total Number of Votes uploaded&equals; <votesuploaded> 0</votesuploaded> </p>
+                <p>Total Numbers of Polling Unit Uploaded &equals;<PUuploaded> 0</PUuploaded> of 13,350</p>
+            </div>
+
+            <button class="upload-result-mobile" >Upload Result</button>
+        </div>
+    </main>
+
+    <footer> <p>&#169; 2023 Babasalami Developers</p></footer>
+
+    <script src="/Javascript/index.js"></script>
+    <script src="/Javascript/chart.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+</body>
+</html>

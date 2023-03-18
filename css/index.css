@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(30, 30, 30);
+    left: 0;
+    right: 0;
+    height: 10vh;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+header p{
+    font: 1em sans-serif;
+}
+
+main{
+    left: 0;
+    right: 0;
+    height: 80vh;
+    display: flex;
+}
+
+footer{
+    background-color: rgb(30, 30, 30);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5vh;
+    /* position: fixed; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.bar-chart{
+    width: 50%;
+    text-align: center;
+}
+
+.upload-successful img{
+    height: 30vh;
+    margin-top: 7%;
+}
+
+/* Displays */
+.sub-container{
+    display: block;
+}
+
+.upload-successful{
+    display: none;
+}
+
+.ward-uploaded{
+	display: none;
+}
+
+.dispute-result{
+	display: none;
+}
+
+.dispute-upload-successful{
+    display: none;
+}
+
+.upload-result-mobile{
+    display: none;
+}
